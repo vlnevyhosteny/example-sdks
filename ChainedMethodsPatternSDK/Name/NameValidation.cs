@@ -33,4 +33,10 @@ public class NameValidation : BaseRequestBuilder<NameValidationRequestBody, Name
     Headers.Add("Foxentry-Include-Request-Details", "true");
     return this;
   }
+
+  public NameValidation WithQuery(NameValidationRequestBody body) 
+  {
+    WithBody(body);
+    return this;
+  }
 }

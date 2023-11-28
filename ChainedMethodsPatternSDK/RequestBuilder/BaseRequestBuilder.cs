@@ -19,7 +19,7 @@ public abstract class BaseRequestBuilder<B, R> : IRequestBuilder<B, R> where B :
     Path = path;
   }
 
-  public IRequestBuilder<B, R> WithBody(B body)
+  protected IRequestBuilder<B, R> WithBody(B body)
   {
     _body = body;
     return this;
